@@ -52,5 +52,13 @@ X = X.transpose()
 feature_nomalize: FeatureNomalize = FeatureNomalize()
 X = feature_nomalize.do_feature_normalization(X)
 
+alpha = 0.01
+num_iters = 400
+theta = np.zeros((3, 1))
+
+gradient_descent_obj2: GradientDescent = GradientDescent()
+new_theta = gradient_descent_obj2.compute_gradient_descent(X, y, theta, alpha, num_iters)
+
+
 
 x = 0
